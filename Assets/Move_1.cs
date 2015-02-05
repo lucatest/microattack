@@ -27,9 +27,11 @@ public class Move_1 : MonoBehaviour {
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
 		movement.Set (h, 0f, v);
+		// .normalized -> return vector with magnitude=1, avoid magnitude increase when two coord=1
 		movement = movement.normalized * speed * 50 * Time.deltaTime;
+		// rotate vector
 		movement = quat * movement;
-
+		//Debug.DrawLine(Vector3.zero, movement, Color.red);
 
 		controller.SimpleMove(movement);
 		
@@ -39,6 +41,8 @@ public class Move_1 : MonoBehaviour {
 		} else {
 			anim.SetBool ("isWalking", false);
 		}
-		
+
+		//transform.Rotate(0, f, 0);
+
 	}
 }
