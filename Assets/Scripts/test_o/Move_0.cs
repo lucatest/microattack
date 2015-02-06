@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Horizontal contol (a-d) -> rotate
+// Vertical control (w-s) -> move 
+
 public class Move_0 : MonoBehaviour {
 
 	// Use this for initialization
