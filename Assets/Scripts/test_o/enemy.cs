@@ -28,8 +28,9 @@ public class enemy : MonoBehaviour {
 	}
 
 	void start_wave( int num, int delta){
+		Instantiate (zoombun);
 		wave_inf = new int[2];
-		wave_inf [0] = num;
+		wave_inf [0] = num - 1;
 		wave_inf [1] = delta;
 	}
 
