@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ZombearMaterial
-  m_Shader: {fileID: 4800000, guid: 799a72a7e5f5bec4ca234fd03e089e65, type: 3}
+  m_Shader: {fileID: 4, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,14 +17,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 37f35c93d3266b54da35dabf009bebf1, type: 3}
+          m_Texture: {fileID: 2800000, guid: 03d8305193808204f8c7312619dc4b85, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 9259d3292aeda6649b38e9e19f917f8c, type: 3}
+          m_Texture: {fileID: 2800000, guid: 370a7551891c2e54c8b77bcc4ba5a3c5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:

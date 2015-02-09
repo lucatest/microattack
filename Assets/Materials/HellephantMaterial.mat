@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HellephantMaterial
-  m_Shader: {fileID: 4800000, guid: 799a72a7e5f5bec4ca234fd03e089e65, type: 3}
+  m_Shader: {fileID: 2, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,26 +17,26 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: d93566e2c451de64b9ed680ab7299fce, type: 3}
+          m_Texture: {fileID: 2800000, guid: 3f160fce269f2314ba783ca8d84d5dfc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: bd473d7a86fc07048aec91521a623e03, type: 3}
+          m_Texture: {fileID: 2800000, guid: bb9ff6044e8b0734eac8a8f85ce8b92a, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _SpecColor
+          name: _Detail
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Detail
+          name: _SpecColor
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}

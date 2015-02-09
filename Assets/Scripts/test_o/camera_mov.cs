@@ -6,7 +6,9 @@ public class camera_mov : MonoBehaviour {
 	public float offset_x;
 	public float offset_y;
 	public float offset_z;
+	public float offset_posX;
 	public float offset_posY;
+	public float offset_posZ;
 
 	public Transform target;
 
@@ -23,21 +25,11 @@ public class camera_mov : MonoBehaviour {
 	void Update () {
 		cam_pos = target.position;
 		transform.position = target.position + new Vector3 (offset_x, offset_y, offset_z);
-		//transform.position = target.position - new Vector3 (offset_x, offset_y, 0);
 		transform.LookAt (target);
-		//Vector3 cam_pos = transform.position;
-		//transform.position = new Vector3 (cam_pos.x, cam_pos.y + offset_posY, cam_pos.z);
-
-		/*
+		cam_pos = transform.position;
+		transform.position = new Vector3 (cam_pos.x + offset_posX, cam_pos.y + offset_posY, cam_pos.z + offset_posZ);
 
 
-		transform.position.z =  target.position.z;
-		transform.position.x =  target.position.x -offset_x;
-		transform.position.y =  target.position.y -offset_y;
-		transform.LookAt(target);
-		transform.position.y =  target.position.y +offset_posY;
-		camera.fieldOfView = 46;
-		*/
 	}
 
 

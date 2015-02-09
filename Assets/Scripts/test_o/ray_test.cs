@@ -18,7 +18,7 @@ public class ray_test : MonoBehaviour {
 	}
 	
 	void ray1 (){
-		// draw a 5pt. line from Player to a direction
+		// draw a 5pt. line from Player to a DIRECTION, not a point!!
 		Ray ray = new Ray (transform.position, new Vector3(1,0,0));
 		Debug.DrawLine(ray.origin, ray.GetPoint (5), Color.red);
 	}
