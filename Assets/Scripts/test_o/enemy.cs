@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 	public Transform target;
 	public float speed;
 	public Transform zoombun;
@@ -28,7 +28,7 @@ public class enemy : MonoBehaviour {
 	}
 
 	void start_wave( int num, int delta){
-		Instantiate (zoombun);
+		//Instantiate (zoombun);
 		wave_inf = new int[2];
 		wave_inf [0] = num - 1;
 		wave_inf [1] = delta;
@@ -37,7 +37,7 @@ public class enemy : MonoBehaviour {
 	void EnemyWave( int num, int delta){
 		if ((Time.time - inst_time) >= delta) {
 			inst_time = Time.time;
-			Instantiate (zoombun);
+			//Instantiate (zoombun);
 			wave_inf[0] --;
 		}
 

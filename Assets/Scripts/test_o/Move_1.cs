@@ -11,6 +11,7 @@ public class Move_1 : MonoBehaviour {
 	public float ang_speed;
 
 	Animator anim;
+	Life life;
 	CharacterController controller;
 	Vector3 movement;
 	Quaternion quat;
@@ -18,29 +19,34 @@ public class Move_1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent <Animator> ();
+		life = GetComponent <Life> ();
 		controller = GetComponent<CharacterController>();
 		quat = Quaternion.AngleAxis (ang, Vector3.up);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		move ();
-		rotate ();
+
+	}
+
+	void FixedUpdate (){
+		if (life.PlayerStat()){
+			move ();
+			rotate ();
+		}
 	}
 
 	void move (){
-		float h = Input.GetAxis ("Horizontal");
-		float v = Input.GetAxis ("Vertical");
+		float h = Input.GetAxisRaw ("Horizontal");
+		float v = Input.GetAxisRaw ("Vertical");
 		movement.Set (h, 0f, v);
 
 		// .normalized -> return vector with magnitude=1, avoid magnitude increase when two coord=1
 		movement = movement.normalized * speed * 50 * Time.deltaTime;
 
 		// rotate vector
-		movement = quat * movement;
+		//movement = quat * movement;
 
-		//Debug.DrawLine(Vector3.zero, movement, Color.red);
-		
 		controller.SimpleMove(movement);
 		if ( h != 0f || v != 0f ) {
 			anim.SetBool ("isWalking", true);

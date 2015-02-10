@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class hellep : enemy {
+public class hellep : Enemy {
 	float step;
 	Animator anim;
 
