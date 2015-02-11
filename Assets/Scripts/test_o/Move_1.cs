@@ -22,6 +22,7 @@ public class Move_1 : MonoBehaviour {
 		life = GetComponent <Life> ();
 		controller = GetComponent<CharacterController>();
 		quat = Quaternion.AngleAxis (ang, Vector3.up);
+
 	}
 	
 	// Update is called once per frame

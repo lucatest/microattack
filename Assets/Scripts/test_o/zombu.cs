@@ -5,11 +5,10 @@ public class Zombu : Enemy {
 	GameObject player;
 	Life life;
 	Animator anim;
-
+	
 	float step;
 	bool start = false;
 	bool live = true;
-	Vector3 start_pos;
 	float att_time;		//min time between two attack
 	float time;
 
@@ -21,13 +20,17 @@ public class Zombu : Enemy {
 		life = player.GetComponent <Life> ();
 		step = speed * Time.deltaTime;
 		anim.SetBool ("isWalking", true);
-		start_pos.Set (19.5f, 0.1f, 12.5f);
 		time = Time.time;
 		att_time = 2f;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	
+	}
+
+	void FixedUpdate (){
 		Follow ();
 	}
 
