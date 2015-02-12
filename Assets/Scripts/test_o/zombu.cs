@@ -2,9 +2,23 @@
 using System.Collections;
 
 public class Zombu : Enemy {
+
+	// Inherited from Enemy:
+	//
+	// Transform target;
+	// float speed;
+	// int start_energy;
+	// int decr_energy;
+	// Vector3 start_pos;
+	// Look(CharacterController, Transform, float)
+	// start_wave(int, int, int)
+
+	public AudioClip death;
+
 	GameObject player;
 	Life life;
 	Animator anim;
+	CharacterController contr;
 	
 	float step;
 	bool start = false;
@@ -12,8 +26,11 @@ public class Zombu : Enemy {
 	float att_time;		//min time between two attack
 	float time;
 
+	AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
+
 		player = GameObject.Find ("Player");
 		anim = GetComponent <Animator> ();
 		target = player.GetComponent <Transform> ();
@@ -22,53 +39,56 @@ public class Zombu : Enemy {
 		anim.SetBool ("isWalking", true);
 		time = Time.time;
 		att_time = 2f;
-
+		audio = GetComponent<AudioSource> ();
+		contr = GetComponent<CharacterController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		Follow ();
 	}
 
 	void FixedUpdate (){
-		Follow ();
+		//Follow ();
 	}
 
 	void Follow(){
 		if (life.PlayerStat()){
-			if (start && live){
-				// follow the player
-				Look (target, step);
-			} else{
-				// go out from the base, defined in start_pos
-				transform.position = Vector3.MoveTowards(transform.position, start_pos, step);
-				if (transform.position == start_pos){
-					start=true;
-				}
+			if (live){
+				Look (contr, target, speed);
 			}
 		}else{
 			anim.SetTrigger("idle");
 		}
-
 	}
 
 	void OnCollisionStay(Collision coll){
-		if (Time.time - time > att_time && coll.gameObject.name == "Player" && live) {
+		if (Time.time - time > att_time && coll.gameObject.name == "Player" && live && life.PlayerStat()) {
+			Debug.Log ("ASD");
 			life.DecrEnergy (30);
 			time=Time.time;
 		}
-		/*
-		if (coll.gameObject.name == "Player") {
-			live=false;
-			anim.SetTrigger("die");
-			//Destroy(gameObject);	
-		}
-		*/
 	}
 
 
 	void end(){
 		Destroy(gameObject);
+	}
+
+	public void DecrEnergy (){
+		start_energy -= decr_energy;
+		audio.Play ();
+		if (start_energy <= 0) {
+			contr.enabled=false;
+			Death ();
+		}
+	}
+
+	void Death(){
+		live = false;
+		audio.clip = death;
+		audio.Play ();
+		anim.SetTrigger("die");
 	}
 
 }

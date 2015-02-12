@@ -15,6 +15,6 @@ public class hellep : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
-		Look (target, step);
+		//Look (target, step);
 	}
 }

@@ -4,10 +4,10 @@ using System.Collections;
 public class Life : MonoBehaviour {
 
 	public AudioClip death;
+	public AudioClip hurt;
 
 	Animator anim;
 	int energy;			// amount of energy
-	int sps;			// shoot per second
 	bool live;
 	AudioSource audio;
 
@@ -25,14 +25,13 @@ public class Life : MonoBehaviour {
 	}
 
 	void Death (){
-		Debug.Log ("DEATH");
 		anim.SetTrigger("Die");
 	}
 
 	public void DecrEnergy (int dec){
-		energy = energy - dec;
+		energy -= dec;
+		audio.clip = hurt;
 		audio.Play ();
-		Debug.Log (energy);
 		if (energy <= 0) {
 			live=false;
 			audio.clip = death;

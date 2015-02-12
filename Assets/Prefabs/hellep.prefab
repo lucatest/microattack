@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ctrl_Grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 427512}
   - 137: {fileID: 13727556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hellephant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightEarEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftEar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightEar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpineEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftEar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trunk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - 82: {fileID: 8202368}
   - 54: {fileID: 5402368}
   - 136: {fileID: 13602368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hellep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trunk3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightEar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trunk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftEarEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - 4: {fileID: 459440}
   - 199: {fileID: 19959440}
   - 198: {fileID: 19859440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127540}
   m_LocalRotation: {x: 0, y: -.930129468, z: 0, w: .367231786}
-  m_LocalPosition: {x: -2, y: 0, z: 30}
+  m_LocalPosition: {x: -2.83999991, y: 0, z: 30.1399994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427510}
@@ -720,7 +720,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!82 &8202368
 AudioSource:
@@ -808,8 +808,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 2
+  start_energy: 60
+  decr_energy: 20
+  start_pos: {x: -6.30000019, y: 0, z: 26.3999996}
   ene: []
-  start_pos: {x: -5, y: 0, z: 27}
+  death: {fileID: 8300000, guid: 29f049b942857db46a4725c54c3d6acb, type: 3}
 --- !u!136 &13602368
 CapsuleCollider:
   m_ObjectHideFlags: 1
