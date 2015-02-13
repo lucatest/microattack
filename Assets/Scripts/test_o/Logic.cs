@@ -86,7 +86,9 @@ public class Logic : MonoBehaviour {
 		gemCreated = true;
 		gemTime = Time.time;
 		// manage gem creation with num!!
-		Instantiate (gemObject);
+		//Instantiate (gemObject);
+		Instantiate (gemObject, new Vector3(-3f, 0.8f, 1.5f), Quaternion.identity);
+		Instantiate (gemObject, new Vector3(-3f, 0.8f, 3.5f), Quaternion.identity);
 	}
 
 	bool GemInScene(){

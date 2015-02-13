@@ -17,7 +17,7 @@ public class gem : MonoBehaviour {
 		int score;
 		score = PlayerPrefs.GetInt ("score");
 		PlayerPrefs.SetInt ("score", score+1);
-		Debug.Log(PlayerPrefs.GetInt ("score"));
+		Debug.Log("Score: "+PlayerPrefs.GetInt ("score"));
 		Destroy(gameObject);
 	}
 }

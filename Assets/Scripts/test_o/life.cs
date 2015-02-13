@@ -32,6 +32,7 @@ public class Life : MonoBehaviour {
 		energy -= dec;
 		audio.clip = hurt;
 		audio.Play ();
+		Debug.Log ("Energy left: "+energy);
 		if (energy <= 0) {
 			live=false;
 			audio.clip = death;
