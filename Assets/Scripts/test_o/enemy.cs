@@ -13,12 +13,10 @@ public class Enemy : MonoBehaviour {
 	float [] inst_time;
 	float step_time;
 	int[,] wave_inf = new int[3, 2];
-	
+	bool enemyInScene;
 	
 	// Use this for initialization
 	void Start () {
-		inst_time = new float[] {Time.time, Time.time, Time.time};
-
 		ene = new Transform[3];
 
 		// Taken from the prefab in Resources folder, leave inactive Enemy GameObject in scene!!
@@ -28,10 +26,6 @@ public class Enemy : MonoBehaviour {
 		ene[1] = Resources.Load<Transform>("zoombea");
 		ene[2] = Resources.Load<Transform>("hellep");
 
-		start_wave (0, 3, 3);
-		start_wave (1, 2, 10);
-		start_wave (2, 2, 40);
-
 	}
 	
 	// Update is called once per frame
@@ -39,13 +33,21 @@ public class Enemy : MonoBehaviour {
 		WaveControl ();
 	}
 	 
-	public void start_wave(int enemy, int num, int delta){
-		Instantiate (ene[enemy]);
-		wave_inf [enemy, 0] = num - 1;
-		wave_inf [enemy, 1] = delta;
+	public void StartWave(int enemy, int num, int deltaTime, bool startWithEnemy){
+		inst_time = new float[] {Time.time, Time.time, Time.time};
+		enemyInScene = true;
+		if (startWithEnemy) {
+			Instantiate (ene[enemy]);
+			wave_inf [enemy, 0] = num - 1;
+		}else{
+			wave_inf [enemy, 0] = num;
+		}
+		wave_inf [enemy, 1] = deltaTime;
 	}
 
 	void WaveControl(){
+		int count;
+		count = 0;
 		for (int i = 0; i < 3; i++) {
 			if (wave_inf [i,0] != 0) {
 				EnemyWave(i, wave_inf [i,0], wave_inf[i,1]);
@@ -60,16 +62,16 @@ public class Enemy : MonoBehaviour {
 			wave_inf[enemy,0] --;
 		}
 	}
-	
-	
-	public void Look ( CharacterController contro, Transform target, float speed){
-		//transform.LookAt (target);
-		//transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
+	public void Look ( CharacterController contro, Transform target, float speed){
 		transform.LookAt (target);
 		Vector3 forward = transform.TransformDirection(Vector3.forward);
-		
 		contro.SimpleMove(forward* speed * 50f * Time.deltaTime);
+	}
 
+	public bool EnemyInScene (){
+		GameObject[] enemy;
+		enemy = GameObject.FindGameObjectsWithTag ("enemy");
+		if (enemy.Length != 0){return true;}else{return false;}
 	}
 }

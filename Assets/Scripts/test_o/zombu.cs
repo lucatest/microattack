@@ -11,7 +11,7 @@ public class Zombu : Enemy {
 	// int decr_energy;
 	// Vector3 start_pos;
 	// Look(CharacterController, Transform, float)
-	// start_wave(int, int, int)
+	// start_wave(int, int, int, bool)
 
 	public AudioClip death;
 
@@ -27,6 +27,7 @@ public class Zombu : Enemy {
 	float time;
 
 	AudioSource audio;
+	ParticleSystem particles;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,7 @@ public class Zombu : Enemy {
 		att_time = 2f;
 		audio = GetComponent<AudioSource> ();
 		contr = GetComponent<CharacterController> ();
+		particles =  GetComponentInChildren<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
@@ -49,7 +51,7 @@ public class Zombu : Enemy {
 	}
 
 	void FixedUpdate (){
-		//Follow ();
+	
 	}
 
 	void Follow(){
@@ -64,20 +66,20 @@ public class Zombu : Enemy {
 
 	void OnCollisionStay(Collision coll){
 		if (Time.time - time > att_time && coll.gameObject.name == "Player" && live && life.PlayerStat()) {
-			Debug.Log ("ASD");
 			life.DecrEnergy (30);
 			time=Time.time;
 		}
 	}
-
-
+	
 	void end(){
 		Destroy(gameObject);
 	}
 
-	public void DecrEnergy (){
+	public void DecrEnergy (Vector3 hitPoint){
 		start_energy -= decr_energy;
 		audio.Play ();
+		particles.transform.position = hitPoint;
+		particles.Play ();
 		if (start_energy <= 0) {
 			contr.enabled=false;
 			Death ();
@@ -85,6 +87,7 @@ public class Zombu : Enemy {
 	}
 
 	void Death(){
+		gameObject.layer = 0;
 		live = false;
 		audio.clip = death;
 		audio.Play ();

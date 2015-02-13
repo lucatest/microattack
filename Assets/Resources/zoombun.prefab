@@ -71,9 +71,7 @@ GameObject:
   - 4: {fileID: 459620}
   - 95: {fileID: 9559612}
   - 114: {fileID: 11459612}
-  - 135: {fileID: 13559612}
   - 82: {fileID: 8259612}
-  - 65: {fileID: 6559612}
   - 143: {fileID: 14371398}
   - 54: {fileID: 5482138}
   - 136: {fileID: 13625780}
@@ -1117,18 +1115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &6559612
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.29999995, y: 1.62, z: 1.30999994}
-  m_Center: {x: 0, y: .779999971, z: 0}
 --- !u!82 &8259612
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1218,18 +1204,6 @@ MonoBehaviour:
   start_energy: 40
   decr_energy: 20
   death: {fileID: 8300000, guid: c042221a2879e3e44b415b72b3b1f458, type: 3}
---- !u!135 &13559612
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: .800000012
-  m_Center: {x: 0, y: .800000012, z: 0}
 --- !u!136 &13625780
 CapsuleCollider:
   m_ObjectHideFlags: 1

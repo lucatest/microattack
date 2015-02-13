@@ -49,11 +49,11 @@ public class shoot : MonoBehaviour {
 			ray.origin = transform.position;
 			ray.direction = transform.forward;
 			if(Physics.Raycast (ray, out hit, 100, layerMask)){
-				// line renderer don't use World Space coordinates
+				// line renderer -> don't use World Space coordinates
 				line.SetPosition (1, new Vector3(0,0,hit.distance));
 				//enemyName = hit.collider.gameObject.name;
 				if(hit.collider.gameObject.GetComponent<Zombu> () ){
-					hit.collider.gameObject.GetComponent<Zombu> ().DecrEnergy();
+					hit.collider.gameObject.GetComponent<Zombu> ().DecrEnergy(hit.point);
 				}
 			}else{
 				line.SetPosition (1, new Vector3(0,0,100));
