@@ -15,9 +15,33 @@ Platform assembly: C:\Users\Public\Documents\Unity Projects\micro_attack\test_Da
 Loading C:\Users\Public\Documents\Unity Projects\micro_attack\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Public\Documents\Unity Projects\micro_attack\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Public\Documents\Unity Projects\micro_attack\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.370 seconds
-desktop: 1360x768 60Hz; virtual: 1360x768 at 0,0
+- Completed reload, in  0.054 seconds
+desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
 <RI> Input initialized.
 Platform assembly: C:\Users\Public\Documents\Unity Projects\micro_attack\test_Data\Managed\System.Core.dll (this message is harmless)
+Score: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Score: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Energy left: 70
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Energy left: 40
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Energy left: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Energy left: -20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+

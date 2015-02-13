@@ -10,7 +10,6 @@ public class shoot : MonoBehaviour {
 	AudioSource audio;
 
 	public AudioClip shoot_audio;
-	public Vector3 pp;
 
 	GameObject gunEnd;
 	Ray ray;
@@ -45,18 +44,18 @@ public class shoot : MonoBehaviour {
 			audio.clip=shoot_audio;
 			audio.Play ();
 			line.enabled=true;
-			line.SetPosition(0, Vector3.zero);
+			line.SetPosition(0, transform.position);
 			ray.origin = transform.position;
 			ray.direction = transform.forward;
 			if(Physics.Raycast (ray, out hit, 100, layerMask)){
-				// line renderer -> don't use World Space coordinates
-				line.SetPosition (1, new Vector3(0,0,hit.distance));
+				// line renderer -> use World Space coordinates
+				line.SetPosition (1, hit.point);
 				//enemyName = hit.collider.gameObject.name;
 				if(hit.collider.gameObject.GetComponent<Zombu> () ){
 					hit.collider.gameObject.GetComponent<Zombu> ().DecrEnergy(hit.point);
 				}
 			}else{
-				line.SetPosition (1, new Vector3(0,0,100));
+				line.SetPosition (1, ray.origin + ray.direction * 100);
 			}
 		}
 		if (light.enabled && timer >= line_time) {
