@@ -14,11 +14,15 @@ public class Zombu : Enemy {
 	// start_wave(int, int, int, bool)
 
 	public AudioClip death;
+	public int scoreToAdd;
+
 
 	GameObject player;
 	Life life;
 	Animator anim;
 	CharacterController contr;
+
+	Logic logic;
 	
 	float step;
 	bool start = false;
@@ -31,6 +35,7 @@ public class Zombu : Enemy {
 
 	// Use this for initialization
 	void Start () {
+		logic = new Logic ();
 
 		player = GameObject.Find ("Player");
 		anim = GetComponent <Animator> ();
@@ -91,6 +96,8 @@ public class Zombu : Enemy {
 		live = false;
 		audio.clip = death;
 		audio.Play ();
+		PlayerPrefs.SetInt ("score", PlayerPrefs.GetInt ("score")+scoreToAdd);
+		logic.UpdateScore ();
 		anim.SetTrigger("die");
 	}
 

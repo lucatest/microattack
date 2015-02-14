@@ -731,8 +731,8 @@ AudioSource:
   m_GameObject: {fileID: 101968}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 6a1127ddfbc237a43af6bcad77c24e42, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -808,10 +808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2
+  speed: 3
   start_energy: 60
   decr_energy: 20
   death: {fileID: 8300000, guid: 29f049b942857db46a4725c54c3d6acb, type: 3}
+  scoreToAdd: 10
 --- !u!136 &13601988
 CapsuleCollider:
   m_ObjectHideFlags: 1

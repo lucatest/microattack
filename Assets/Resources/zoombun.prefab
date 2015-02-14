@@ -1204,6 +1204,7 @@ MonoBehaviour:
   start_energy: 40
   decr_energy: 20
   death: {fileID: 8300000, guid: c042221a2879e3e44b415b72b3b1f458, type: 3}
+  scoreToAdd: 5
 --- !u!136 &13625780
 CapsuleCollider:
   m_ObjectHideFlags: 1

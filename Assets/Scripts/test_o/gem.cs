@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class gem : MonoBehaviour {
+	Logic logic;
 
 	// Use this for initialization
 	void Start () {
-	
+		logic = new Logic ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	void OnTriggerEnter(){
-		int score;
-		score = PlayerPrefs.GetInt ("score");
-		PlayerPrefs.SetInt ("score", score+1);
-		Debug.Log("Score: "+PlayerPrefs.GetInt ("score"));
+		PlayerPrefs.SetInt ("score", PlayerPrefs.GetInt ("score")+1);
+		logic.UpdateScore ();
 		Destroy(gameObject);
 	}
 }

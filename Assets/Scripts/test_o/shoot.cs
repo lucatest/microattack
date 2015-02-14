@@ -29,8 +29,8 @@ public class shoot : MonoBehaviour {
 		line = GetComponentInChildren<LineRenderer> ();
 		light = GetComponentInChildren<Light> ();
 		audio = GetComponent<AudioSource> ();
-		sps = 0.5f;
-		line_time = 0.2f;
+		sps = 0.2f;
+		line_time = 0.1f;
 		layerMask = LayerMask.GetMask ("shootable");
 	}
 	

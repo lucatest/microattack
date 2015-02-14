@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Logic : MonoBehaviour {
 
 	Enemy enemy;
+
 	public int startZoombunny;
 	public int startZoombear;
 	public int startHellephant;
@@ -95,5 +97,11 @@ public class Logic : MonoBehaviour {
 		GameObject[] gemInScene;
 		gemInScene = GameObject.FindGameObjectsWithTag ("gem");
 		if (gemInScene.Length != 0){return true;}else{return false;}
+	}
+
+	public void UpdateScore(){
+		Text scoreTextObject;
+		scoreTextObject = GameObject.Find ("ScoreText").GetComponent<Text> ();
+		scoreTextObject.text = "Score: " + PlayerPrefs.GetInt ("score");
 	}
 }
