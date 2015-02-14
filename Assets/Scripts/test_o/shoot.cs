@@ -51,8 +51,9 @@ public class shoot : MonoBehaviour {
 				// line renderer -> use World Space coordinates
 				line.SetPosition (1, hit.point);
 				//enemyName = hit.collider.gameObject.name;
-				if(hit.collider.gameObject.GetComponent<Zombu> () ){
-					hit.collider.gameObject.GetComponent<Zombu> ().DecrEnergy(hit.point);
+				Zombu zombu = hit.collider.gameObject.GetComponent<Zombu> ();
+				if ( zombu ){
+					zombu.DecrEnergy(hit.point);
 				}
 			}else{
 				line.SetPosition (1, ray.origin + ray.direction * 100);

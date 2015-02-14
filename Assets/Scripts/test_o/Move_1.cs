@@ -31,7 +31,7 @@ public class Move_1 : MonoBehaviour {
 	}
 
 	void FixedUpdate (){
-		if (life.PlayerStat()){
+		if (life.PlayerStat){
 			move ();
 			rotate ();
 		}

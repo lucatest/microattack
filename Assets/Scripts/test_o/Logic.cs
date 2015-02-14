@@ -64,7 +64,7 @@ public class Logic : MonoBehaviour {
 
 	void ManageEnemy(){
 		if (startedWave){
-			if ( !enemy.EnemyInScene() ) {
+			if ( !enemy.EnemyInScene) {
 				gem = true;
 				startedWave = false;
 			}
@@ -88,15 +88,14 @@ public class Logic : MonoBehaviour {
 		gemCreated = true;
 		gemTime = Time.time;
 		// manage gem creation with num!!
-		//Instantiate (gemObject);
 		Instantiate (gemObject, new Vector3(-3f, 0.8f, 1.5f), Quaternion.identity);
 		Instantiate (gemObject, new Vector3(-3f, 0.8f, 3.5f), Quaternion.identity);
 	}
 
-	bool GemInScene(){
+	bool GemInScene (){
 		GameObject[] gemInScene;
 		gemInScene = GameObject.FindGameObjectsWithTag ("gem");
-		if (gemInScene.Length != 0){return true;}else{return false;}
+		return gemInScene.Length != 0 ? true : false;
 	}
 
 	public void UpdateScore(){

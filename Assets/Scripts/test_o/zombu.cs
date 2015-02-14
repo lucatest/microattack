@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Zombu : Enemy {
 
+	public static int count = 0;		// viene definito una sola volta all'inizio
+										// altre istanze della classe non riazzerano la proprietà
+										// in Start() viene poi aumentata di uno, tiene conto di
+										// quante volte è stata istanziata
+
 	// Inherited from Enemy:
 	//
 	// Transform target;
@@ -35,6 +40,8 @@ public class Zombu : Enemy {
 
 	// Use this for initialization
 	void Start () {
+		count++;		// Zombu.count puo essere richiamata ovunque
+
 		logic = new Logic ();
 
 		player = GameObject.Find ("Player");
@@ -60,7 +67,7 @@ public class Zombu : Enemy {
 	}
 
 	void Follow(){
-		if (life.PlayerStat()){
+		if (life.PlayerStat){
 			if (live){
 				Look (contr, target, speed);
 			}
@@ -70,7 +77,7 @@ public class Zombu : Enemy {
 	}
 
 	void OnCollisionStay(Collision coll){
-		if (Time.time - time > att_time && coll.gameObject.name == "Player" && live && life.PlayerStat()) {
+		if (Time.time - time > att_time && coll.gameObject.name == "Player" && live && life.PlayerStat) {
 			life.DecrEnergy (30);
 			time=Time.time;
 		}

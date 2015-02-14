@@ -61,7 +61,9 @@ public class Life : MonoBehaviour {
 	}
 
 
-	public bool PlayerStat(){
-		return live;
+	public bool PlayerStat{
+		get{
+			return live;
+		}
 	}
 }

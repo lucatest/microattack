@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
 	float step_time;
 	int[,] wave_inf = new int[3, 2];
 	bool enemyInScene;
+	bool moreEnemy;
 	
 	// Use this for initialization
 	void Start () {
@@ -46,13 +47,14 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void WaveControl(){
-		int count;
-		count = 0;
+		int count = 0;
 		for (int i = 0; i < 3; i++) {
 			if (wave_inf [i,0] != 0) {
 				EnemyWave(i, wave_inf [i,0], wave_inf[i,1]);
+				count = 1;
 			}
 		}
+		moreEnemy = count == 0 ? false : true;
 	}
 	
 	void EnemyWave(int enemy, int num, int delta){
@@ -69,9 +71,17 @@ public class Enemy : MonoBehaviour {
 		contro.SimpleMove(forward* speed * 50f * Time.deltaTime);
 	}
 
-	public bool EnemyInScene (){
-		GameObject[] enemy;
-		enemy = GameObject.FindGameObjectsWithTag ("enemy");
-		if (enemy.Length != 0){return true;}else{return false;}
+	public bool EnemyInScene {
+		get{
+			if (moreEnemy){
+				return true;
+			}else{
+				// Si potrebbe avere una var statica su Zombu che ++ ad ogni istanza su start e -- a Destroy
+				GameObject[] enemy;
+				enemy = GameObject.FindGameObjectsWithTag ("enemy");
+				return enemy.Length != 0 ? true : false;
+			}
+		}
 	}
+
 }
